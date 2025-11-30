@@ -75,7 +75,17 @@ body {
     padding-left: 60px;
     margin-top: 90px;
 }
+.banner-poster
+{
 
+    text-align: center;
+}
+.poster-overlay
+{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
 .banner-text h1 {
     font-size: 48px;
     font-weight: 700;
