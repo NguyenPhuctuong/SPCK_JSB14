@@ -1,0 +1,214 @@
+/* ================== LOOKBOOK.CSS ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #111;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: #555;
+}
+
+.login-btn {
+    padding: 6px 14px;
+    border: 1px solid #111;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    height: 80vh;
+    background: url('https://dirtycoins.vn/cdn/shop/files/Banner_Lookbook.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    margin-top: 90px;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.banner-text {
+    position: relative;
+    color: #fff;
+    max-width: 500px;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.banner-text p {
+    margin: 15px 0;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== LOOKBOOK GRID ===== */
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 80px 60px;
+}
+
+.lookbook-grid img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+.lookbook-grid img:hover {
+    transform: scale(1.05);
+    filter: grayscale(80%);
+}
+
+/* ===== COLLECTION ===== */
+.collection {
+    padding: 80px 60px;
+    background: #f5f5f5;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.collection-item {
+    background: #111;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.collection-item:hover {
+    background: #333;
+    transform: scale(1.03);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 60px;
+    background: #111;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 40px;
+}
+
+.footer-col h3, .footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 6px 0;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+    .banner-text h1{font-size: 40px;}
+    .lookbook-grid{gap:20px;}
+    .collection-item{padding:40px 0;}
+}
+
+@media(max-width:768px){
+    .header{padding:15px 30px;flex-direction:column;align-items:flex-start;gap:10px;}
+    .banner-text h1{font-size:32px;}
+    .lookbook-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+    .collection-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
+}

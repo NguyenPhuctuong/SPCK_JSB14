@@ -1,0 +1,78 @@
+/* ================== CONTACT.CSS ================== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+body{background:#fff;color:#111;line-height:1.5;}
+
+/* HEADER SAME AS OTHERS */
+.header{width:100%;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e5e5;position:fixed;top:0;background:#fff;z-index:1000;}
+.header .logo{font-size:28px;font-weight:700;letter-spacing:2px;}
+.nav a{margin:0 18px;text-decoration:none;color:#111;font-weight:500;position:relative;}
+.nav a::after{content:'';position:absolute;width:0;height:2px;background:#111;left:0;bottom:-4px;transition:0.3s;}
+.nav a:hover::after{width:100%;}
+.icons{display:flex;align-items:center;gap:15px;}
+.icon{font-size:20px;cursor:pointer;transition:0.3s;}
+.icon:hover{color:#555;}
+.login-btn{padding:6px 14px;border:1px solid #111;text-decoration:none;color:#111;font-weight:500;transition:0.3s;}
+.login-btn:hover{background:#111;color:#fff;}
+
+/* ===== BANNER ===== */
+.banner{
+    height:70vh;
+    background:url('https://dirtycoins.vn/cdn/shop/files/Banner_Contact.jpg') center/cover no-repeat;
+    display:flex;align-items:center;justify-content:flex-start;padding-left:60px;margin-top:90px;
+    position:relative;
+}
+.banner::after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.2);}
+.banner-text{position:relative;color:#fff;max-width:500px;}
+.banner-text h1{font-size:48px;font-weight:700;line-height:1.2;}
+.banner-text p{margin:15px 0;font-size:18px;opacity:0.9;}
+
+/* ===== CONTACT FORM ===== */
+.contact-box{
+    width:50%;
+    margin:80px auto;
+    padding:40px;
+    border:1px solid #111;
+    border-radius:8px;
+    background:#f9f9f9;
+    transition:0.3s;
+}
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #111;
+    border-radius:4px;
+    background:#fff;
+    transition:0.3s;
+}
+.contact-box input:hover,
+.contact-box textarea:hover{
+    background:#f0f0f0;
+    border-color:#333;
+}
+.contact-box button{
+    width:100%;
+    padding:14px;
+    border:2px solid #111;
+    background:#111;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+.contact-box button:hover{
+    background:#333;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+.footer{padding:60px;background:#111;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;}
+.footer-col h3,.footer-col h4{margin-bottom:15px;}
+.footer-col a{display:block;color:#fff;text-decoration:none;margin:6px 0;opacity:0.8;transition:0.3s;}
+.footer-col a:hover{opacity:1;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){.banner-text h1{font-size:40px;}.contact-box{width:70%;}}
+@media(max-width:768px){.header{padding:15px 30px;flex-direction:column;align-items:flex-start;gap:10px;}.banner-text h1{font-size:32px;}.contact-box{width:90%;}}
