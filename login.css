@@ -1,0 +1,139 @@
+/* ===================== GLOBAL ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ===================== BACKGROUND ===================== */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://dirtycoins.vn/cdn/shop/files/Banner_1.jpg") center/cover no-repeat;
+    filter: brightness(45%) contrast(110%);
+    z-index: -1;
+}
+
+/* Hiệu ứng vignette tối 4 góc */
+.bg-gradient {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+/* ===================== BOX LOGIN ===================== */
+.login-box {
+    width: 380px;
+    padding: 45px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 14px;
+    backdrop-filter: blur(14px);
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    transform: translateY(0);
+    animation: fadeUp 0.9s ease-out;
+}
+
+/* Animation mở màn */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+    margin-bottom: 22px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* ===================== INPUT ===================== */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    background: rgba(255,255,255,0.22);
+    border-color: #fff;
+}
+
+/* ===================== BUTTON ===================== */
+.login-btn {
+    width: 100%;
+    padding: 12px 0;
+    background: #fff;
+    border: none;
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.25s ease;
+}
+
+.login-btn:hover {
+    background: #e2e2e2;
+    transform: translateY(-2px);
+}
+
+/* ===================== SIGNUP ===================== */
+.signup-text {
+    margin-top: 14px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.signup-text a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.signup-text a:hover {
+    opacity: 0.6;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 420px) {
+    .login-box {
+        width: 90%;
+        padding: 35px 25px;
+    }
+}
